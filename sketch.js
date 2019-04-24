@@ -42,6 +42,7 @@ function setup() {
     if (hh.isLoaded() && clap.isLoaded() && bass.isLoaded()) {
       if (!drums.isPlaying) {
         // drums.metro.metroTicks = 0;
+	getAudioContext().resume();
         drums.loop();
         playPause.html("pause")
       } else {
